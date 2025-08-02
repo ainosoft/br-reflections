@@ -6,3 +6,18 @@
 *.ipr
 *.iml
 TODO
+
+# directories
+target
+.settings
+.apt_generated
+.apt_generated_tests
+bin
+.vscode
+.gradle
+.mvn
+
+# files
+.classpath
+.project
+.codetogether.ignore
