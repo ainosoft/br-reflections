@@ -1,8 +1,5 @@
 package org.reflections.util;
 
-import org.reflections.Reflections;
-
-import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -21,6 +18,10 @@ import java.util.Set;
 import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
+
+import org.reflections.Reflections;
+
+import jakarta.servlet.ServletContext;
 
 /**
  * Helper methods for working with the classpath.
