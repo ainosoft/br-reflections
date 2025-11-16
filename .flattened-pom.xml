@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.appops</groupId>
     <artifactId>appops-br-reactor</artifactId>
-    <version>deba-mrs-java-17-1-1</version>
+    <version>deba-mrs-java-17-1-2</version>
     <relativePath>../appops-br-reactor/pom.xml</relativePath>
   </parent>
   <groupId>org.reflections</groupId>
   <artifactId>reflections</artifactId>
-  <version>deba-mrs-java-17-1-1</version>
+  <version>deba-mrs-java-17-1-2</version>
   <name>Reflections</name>
   <description>Reflections - Java runtime metadata analysis</description>
   <url>http://github.com/ronmamo/reflections</url>
