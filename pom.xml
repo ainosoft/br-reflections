@@ -1,9 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+	
+	<parent>
+		<groupId>org.appops</groupId>
+		<artifactId>appops-br-reactor</artifactId>
+		<version>${revision}${changelist}</version>
+		<relativePath>../appops-br-reactor/pom.xml</relativePath>
+	</parent>
+	
     <groupId>org.reflections</groupId>
     <artifactId>reflections</artifactId>
+    
     <packaging>jar</packaging>
 
     <name>Reflections</name>
@@ -51,6 +59,7 @@
     </distributionManagement>
 
     <properties>
+   		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javassist.version>3.28.0-GA</javassist.version>
         <jdk.version>1.8</jdk.version>
         <doclint>none</doclint>
@@ -220,6 +229,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                	<supportIncrementalBuild>true</supportIncrementalBuild>
                     <instructions>
                         <!-- Do not import javax.annotation as we only need these at compile time -->
                         <Import-Package>
