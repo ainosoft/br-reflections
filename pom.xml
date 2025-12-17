@@ -18,12 +18,6 @@
     <description>Reflections - Java runtime metadata analysis</description>
     <url>http://github.com/ronmamo/reflections</url>
 
-	<parent>
-		<groupId>org.appops</groupId>
-		<artifactId>appops-br-reactor</artifactId>
-		<version>zc-blogger-5</version>
-	</parent>
-
     <licenses>
         <license>
             <name>WTFPL</name>

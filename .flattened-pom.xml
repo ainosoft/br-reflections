@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.appops</groupId>
     <artifactId>appops-br-reactor</artifactId>
-    <version>deba-mrs-java-17-1-2</version>
+    <version>deba-mrs-java-17-1-3</version>
     <relativePath>../appops-br-reactor/pom.xml</relativePath>
   </parent>
   <groupId>org.reflections</groupId>
   <artifactId>reflections</artifactId>
-  <version>deba-mrs-java-17-1-2</version>
+  <version>deba-mrs-java-17-1-3</version>
   <name>Reflections</name>
   <description>Reflections - Java runtime metadata analysis</description>
   <url>http://github.com/ronmamo/reflections</url>
@@ -44,10 +44,10 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <doclint>none</doclint>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <javassist.version>3.28.0-GA</javassist.version>
     <jdk.version>1.8</jdk.version>
+    <doclint>none</doclint>
+    <javassist.version>3.28.0-GA</javassist.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
