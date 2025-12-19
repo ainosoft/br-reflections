@@ -183,20 +183,20 @@ public class Reflections implements NameHelper {
             .collect(Collectors.toMap(s -> s, s -> Collections.synchronizedSet(new HashSet<>())));
         Set<URL> urls = configuration.getUrls();
         
-		for (URL url: urls) {
-			String cleanUrl = ClasspathHelper.cleanPath(url);
-			File f = new File(cleanUrl);
-		  URLClassLoader urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-		  Class urlClass = URLClassLoader.class;
-		  Method method;
-			try {
-				method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});
-				method.setAccessible(true);
-				method.invoke(urlClassLoader, new Object[]{f.toURI().toURL()});
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
+//		for (URL url: urls) {
+//			String cleanUrl = ClasspathHelper.cleanPath(url);
+//			File f = new File(cleanUrl);
+//		  URLClassLoader urlClassLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+//		  Class urlClass = URLClassLoader.class;
+//		  Method method;
+//			try {
+//				method = urlClass.getDeclaredMethod("addURL", new Class[]{URL.class});
+//				method.setAccessible(true);
+//				method.invoke(urlClassLoader, new Object[]{f.toURI().toURL()});
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		}
         
         String classpath = System.getProperty("java.class.path");
         String[] classpathEntries = classpath.split(File.pathSeparator);
