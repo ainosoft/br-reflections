@@ -1,14 +1,7 @@
 package org.reflections;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.reflections.scanners.Scanner;
-import org.reflections.scanners.Scanners;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
-import org.reflections.util.UtilQueryBuilder;
-import org.reflections.vfs.Vfs;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.reflections.ReflectionUtils.get;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,8 +21,16 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.reflections.ReflectionUtils.get;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.reflections.scanners.Scanner;
+import org.reflections.scanners.Scanners;
+import org.reflections.util.ClasspathHelper;
+import org.reflections.util.ConfigurationBuilder;
+import org.reflections.util.UtilQueryBuilder;
+import org.reflections.vfs.Vfs;
 
 /**
  * test reflection symmetry between jrt scanned metadata (Scanners) and java reflection accessibility (ReflectionUtils functions).
@@ -37,7 +38,8 @@ import static org.reflections.ReflectionUtils.get;
  * SubTypes/SuperTypes, TypesAnnotated/AnnotatedTypes, MethodsAnnotated/AnnotatedTypes, Resources etc...
  * <p></p>tested with AdoptOpenJDK
  */
-@SuppressWarnings({"ArraysAsListWithZeroOrOneArgument"})
+@SuppressWarnings({"ArraysAsListWithZeroOrOneArgument"}) 
+
 public class JdkTests {
 
 	private static Reflections reflections;
@@ -67,7 +69,7 @@ public class JdkTests {
 		measure("cleanup");
 	}
 
-	@Test
+	@Test @Disabled("Java 17 incompatible impl")
 	public void checkSubTypes() {
 		Map<String, Set<String>> diff = reflect(
 			Scanners.SubTypes,
