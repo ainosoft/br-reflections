@@ -54,7 +54,6 @@
 
     <properties>
         <javassist.version>3.28.0-GA</javassist.version>
-        <jdk.version>${java.version}</jdk.version>
         <doclint>none</doclint>
     </properties>
 
@@ -119,6 +118,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -203,8 +203,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
