@@ -20,4 +20,4 @@ bin
 # files
 .classpath
 .project
-.codetogether.ignore
+.codetogether.ignore.flattened-pom.xml
